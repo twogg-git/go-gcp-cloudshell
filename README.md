@@ -16,7 +16,7 @@ docker run -v $pwd:/go/src/app -p 8181:8080 -d --name go-light golang:1.8 /bin/b
 ```
 
 ```sh
-docker run -v $pwd:/go/src/app --rm --name go-light golang:1.8 /bin/bash -c "cd src/app;go get -v ./...;go run /src/app/main.go"
+docker run -v $pwd:/go/src/app -p 8181:8080 -d --name go-light golang:1.8 /bin/bash -c "cd src/app;go get -v ./...;go run /src/app/main.go"
 ```
 
 ```sh
