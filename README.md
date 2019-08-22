@@ -3,7 +3,10 @@ Simple go endpoints to test with ELK
 
 ```sh
 docker run -v $pwd:/go/src/app -p 8181:8080 -d --name go-light golang:1.8 go run src/app/main.go
+
+docker run -v $(pwd):/go/src/app --rm --name testgo golang:1.8 go run main.go
 ```
+
 
 ```sh
 localhost:8181
